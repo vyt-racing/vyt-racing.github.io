@@ -148,6 +148,8 @@ export function parseResults(html) {
   $('a[href]').each((_, a) => {
     if (!/CLASSEMENT|R[ÉE]SULTAT/i.test(clean($(a).text()))) return;
     const href = $(a).attr('href');
+    // seuls les liens vers les classements eux-mêmes (Apex Timing ou PDF) comptent
+    if (!/apex-timing\.com|\.pdf(\?|$)/i.test(href)) return;
     // l'image de l'affiche est dans le même conteneur que le bouton
     let box = $(a).closest('.e-con');
     let img = box.find('img').first();
@@ -185,9 +187,15 @@ export function attachResults(races, results) {
 // Lien « résultats » trouvé sur la page calendrier (ex. https://vitrine.karting-midipyrenees.fr/2026-2/)
 export function findResultsPage(html, base) {
   const $ = cheerio.load(html);
-  const hrefs = $('a[href]').toArray()
+  const here = new URL(base);
+  const candidates = $('a[href]').toArray()
     .filter((a) => /R[ÉE]SULTAT/i.test(clean($(a).text())))
-    .map((a) => new URL($(a).attr('href'), base).href)
-    .filter((h) => new URL(h).hostname === new URL(base).hostname && !/\.pdf$/i.test(h));
-  return hrefs[0] || null;
+    .map((a) => {
+      try { return new URL($(a).attr('href'), base); } catch { return null; }
+    })
+    .filter((u) => u && u.hostname === here.hostname && !/\.pdf$/i.test(u.pathname)
+      && u.pathname !== here.pathname && u.pathname !== '/');
+  // une page de saison du type /2026-2/ est la plus probable
+  const best = candidates.find((u) => /\/20\d\d[^/]*\/?$/.test(u.pathname)) || candidates[0];
+  return best ? best.origin + best.pathname : null;
 }
