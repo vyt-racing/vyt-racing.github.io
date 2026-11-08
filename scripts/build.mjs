@@ -163,8 +163,10 @@ const vars = {
   results_page: esc(ligue.resultsPage || 'https://vitrine.karting-midipyrenees.fr/'),
   adhesion_url: esc(config.helloasso?.adhesionUrl || mailto('Adhésion')),
   don_url: esc(config.helloasso?.donUrl || mailto('Don')),
-  paiement_mention: config.helloasso?.donUrl
-    ? 'Paiements sécurisés via HelloAsso, plateforme gratuite pour les associations.'
+  adhesion_widget: esc(config.helloasso?.adhesionWidget || ''),
+  adhesion_widget_page: esc((config.helloasso?.adhesionWidget || '').replace(/\/widget$/, '')),
+  paiement_mention: config.helloasso?.adhesionUrl
+    ? (config.helloasso?.donUrl ? 'Adhésions et dons' : 'Adhésions') + ' en ligne via HelloAsso, plateforme de paiement sécurisée et gratuite pour les associations.'
     : 'Adhésion et dons en ligne via HelloAsso très bientôt. En attendant, écrivez-nous : nous vous répondrons rapidement.',
   instagram_link: config.instagram ? `<a href="${esc(config.instagram)}">Instagram</a>` : '',
   prochaine_course: prochaineCourse(),

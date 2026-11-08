@@ -1,0 +1,31 @@
+<!-- {"title": "Adhérer à VYT Racing", "description": "Adhérez à l'association VYT Racing pour la saison en cours : formulaire et paiement sécurisés via HelloAsso."} -->
+{{> head}}
+
+<section class="bandeau">
+<div class="wrap">
+<div>
+<p class="surtitre">Nous soutenir</p>
+<h1 class="titre-xl">Adhérer à l'association</h1>
+<p class="lead">Pilote, parent, bénévole ou simple passionné : l'adhésion fait vivre l'association et ses journées découverte. Le formulaire ci-dessous est géré par HelloAsso.</p>
+</div>
+</div>
+</section>
+<div class="vibreur" aria-hidden="true"></div>
+
+<div class="wrap">
+<div class="widget-ha">
+<iframe id="haWidget" title="Formulaire d'adhésion HelloAsso" src="{{adhesion_widget}}" allow="payment 'self' https://paymenthub.helloassopay.com https://helloasso.com" loading="lazy"></iframe>
+</div>
+<p class="mention">Le formulaire ne s'affiche pas ? <a href="{{adhesion_widget_page}}">Adhérer directement sur HelloAsso</a>.</p>
+</div>
+
+<script>
+window.addEventListener('message', function (e) {
+  if (!/(^|\.)helloasso\.com$/.test(new URL(e.origin).hostname)) return;
+  var h = e.data && Number(e.data.height);
+  var f = document.getElementById('haWidget');
+  if (h && f && h > f.offsetHeight) f.style.height = h + 'px';
+});
+</script>
+
+{{> foot}}
