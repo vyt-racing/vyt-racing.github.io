@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "source": "https://vitrine.karting-midipyrenees.fr/courses/",
-  "resultsPage": "https://vitrine.karting-midipyrenees.fr/2026-2/",
+  "resultsPage": "https://vitrine.karting-midipyrenees.fr/courses/#",
   "live": "https://live.apex-timing.com/ligue-karting-op/",
   "races": [
     {
@@ -15,7 +15,7 @@
       "infoUrl": null,
       "registrationUrl": null,
       "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/affiche-championnat-du-sud-aigues-vives-819x1024.jpg",
-      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/csm1/"
+      "resultsUrl": "https://vitrine.karting-midipyrenees.fr/2026-2/"
     },
     {
       "title": "Championnat du Sud #2",
@@ -28,7 +28,7 @@
       "infoUrl": null,
       "registrationUrl": null,
       "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/affiche-championnat-du-sud-belmont-819x1024.jpg",
-      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/csm2/"
+      "resultsUrl": "https://vitrine.karting-midipyrenees.fr/2026-2/"
     },
     {
       "title": "Championnat du Sud #3",
@@ -41,7 +41,7 @@
       "infoUrl": null,
       "registrationUrl": null,
       "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/Chpt-du-sud-3-ALES-25-26-AVRIL-2026-819x1024.jpg",
-      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/csm3/"
+      "resultsUrl": "https://vitrine.karting-midipyrenees.fr/2026-2/"
     },
     {
       "title": "Championnat du Sud #4",
@@ -54,7 +54,7 @@
       "infoUrl": "https://karting-midipyrenees.fr/course-karting/championnat-du-sud-2026-4-5-ganges-brissac/",
       "registrationUrl": null,
       "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/affiche-championnat-du-sud-ganges-819x1024.jpg",
-      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/csm4/"
+      "resultsUrl": "https://karting-midipyrenees.fr/course-karting/championnat-du-sud-2026-4-5-ganges-brissac/"
     },
     {
       "title": "Trophée Robert Grouillard – Championnat de France Academy",
@@ -93,7 +93,7 @@
       "infoUrl": null,
       "registrationUrl": null,
       "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/affiche-championnat-du-sud-muret-819x1024.jpg",
-      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/csm5/"
+      "resultsUrl": null
     },
     {
       "title": "National Series Karting",
@@ -145,7 +145,7 @@
       "infoUrl": null,
       "registrationUrl": null,
       "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/course-club-Challenge-jc-sanchez-muret-19-juillet-2026-819x1024.jpg",
-      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/sanchezm1/"
+      "resultsUrl": null
     },
     {
       "title": "Challenge J.-C. Sanchez #2",
@@ -158,7 +158,7 @@
       "infoUrl": null,
       "registrationUrl": null,
       "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/course-club-challenge-jc-sanchez-belmont-06-septembre-2026--819x1024.jpg",
-      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/sanchezm2/"
+      "resultsUrl": null
     },
     {
       "title": "Challenge J.-C. Sanchez #3",
@@ -171,7 +171,7 @@
       "infoUrl": null,
       "registrationUrl": null,
       "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/slalom-jc-sanchez-labastide-murat-13-septembre-2026--819x1024.jpg",
-      "resultsUrl": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2026/10/JCS-Labastide-2026.pdf"
+      "resultsUrl": null
     },
     {
       "title": "Soirée remise des prix 2026",
@@ -197,22 +197,9 @@
       "infoUrl": "https://karting-midipyrenees.fr/course-karting/challenge-j-c-sanchez-2026-4-4-aigues-vives/",
       "registrationUrl": "https://karting-midipyrenees.fr/course-karting/challenge-j-c-sanchez-2026-4-4-aigues-vives/",
       "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/Championnat-du-sud-saison-2026-manche-1-circuit-aigues-vives-1-819x1024.jpg",
-      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/sanchezm4/"
+      "resultsUrl": null
     }
   ],
-  "standings": [
-    {
-      "name": "Championnat du Sud",
-      "url": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/champsud/"
-    },
-    {
-      "name": "Championnat de Ligue",
-      "url": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/champligue/"
-    },
-    {
-      "name": "Trophée J.-C. Sanchez",
-      "url": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/trsanchez/"
-    }
-  ],
-  "fetchedAt": "2026-11-08T09:00:00.000Z"
+  "standings": [],
+  "fetchedAt": "2026-11-08T09:09:30.326Z"
 }
