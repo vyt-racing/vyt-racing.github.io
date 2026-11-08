@@ -1,0 +1,218 @@
+{
+  "season": 2026,
+  "source": "https://vitrine.karting-midipyrenees.fr/courses/",
+  "resultsPage": "https://vitrine.karting-midipyrenees.fr/2026-2/",
+  "live": "https://live.apex-timing.com/ligue-karting-op/",
+  "races": [
+    {
+      "title": "Championnat du Sud #1",
+      "kind": "sud",
+      "dateLabel": "SAMEDI 28 FÉVRIER - DIMANCHE 1ER MARS",
+      "start": "2026-02-28",
+      "end": "2026-03-01",
+      "circuit": "Circuit d’Aigues-Vives (09)",
+      "address": "La Plano – 09600 Aigues-Vives",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/affiche-championnat-du-sud-aigues-vives-819x1024.jpg",
+      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/csm1/"
+    },
+    {
+      "title": "Championnat du Sud #2",
+      "kind": "sud",
+      "dateLabel": "SAMEDI 28 & DIMANCHE 29 MARS",
+      "start": "2026-03-28",
+      "end": "2026-03-29",
+      "circuit": "Circuit de Belmont/Rance (12)",
+      "address": "Le Bourg – 12370 BELMONT/RANCE",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/affiche-championnat-du-sud-belmont-819x1024.jpg",
+      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/csm2/"
+    },
+    {
+      "title": "Championnat du Sud #3",
+      "kind": "sud",
+      "dateLabel": "SAMEDI 25 & DIMANCHE 26 AVRIL",
+      "start": "2026-04-25",
+      "end": "2026-04-26",
+      "circuit": "Circuit d’Alès (30)",
+      "address": "Vallon Fontanes – 30520 Saint Martin de Valgalgues",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/Chpt-du-sud-3-ALES-25-26-AVRIL-2026-819x1024.jpg",
+      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/csm3/"
+    },
+    {
+      "title": "Championnat du Sud #4",
+      "kind": "sud",
+      "dateLabel": "SAMEDI 23 & DIMANCHE 24 MAI",
+      "start": "2026-05-23",
+      "end": "2026-05-24",
+      "circuit": "Circuit de Ganges (34)",
+      "address": "Les Péras des Caizergues – 34190 Brissac",
+      "infoUrl": "https://karting-midipyrenees.fr/course-karting/championnat-du-sud-2026-4-5-ganges-brissac/",
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/affiche-championnat-du-sud-ganges-819x1024.jpg",
+      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/csm4/"
+    },
+    {
+      "title": "Trophée Robert Grouillard – Championnat de France Academy",
+      "kind": "national",
+      "dateLabel": "SAMEDI 30 & DIMANCHE 31 MAI",
+      "start": "2026-05-30",
+      "end": "2026-05-31",
+      "circuit": "Circuit de Muret (31)",
+      "address": "21, rue Jean-Manuel Fangio – 31600 MURET",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2026/04/3-31_05-Muret-Championnat-Junior-1-724x1024.jpg",
+      "resultsUrl": null
+    },
+    {
+      "title": "IAME Series France #2",
+      "kind": "national",
+      "dateLabel": "05, 06 & 07 JUIN",
+      "start": "2026-06-05",
+      "end": "2026-06-07",
+      "circuit": "Circuit d’Aigues-Vives",
+      "address": "La Plano – 09600 Aigues-Vives",
+      "infoUrl": "https://karting-midipyrenees.fr/course-karting/iame-series-france-1-4-aigues-vives/",
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/Visuel-Round-2-2026_1080-724x1024.jpg",
+      "resultsUrl": null
+    },
+    {
+      "title": "Championnat du Sud #5",
+      "kind": "sud",
+      "dateLabel": "SAMEDI 13 & DIMANCHE 14 JUIN",
+      "start": "2026-06-13",
+      "end": "2026-06-14",
+      "circuit": "Circuit de Muret",
+      "address": "21, rue Jean-Manuel Fangio – 31600 MURET",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/affiche-championnat-du-sud-muret-819x1024.jpg",
+      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/csm5/"
+    },
+    {
+      "title": "National Series Karting",
+      "kind": "national",
+      "dateLabel": "19 - 20 - 21 JUIN",
+      "start": "2026-06-19",
+      "end": "2026-06-21",
+      "circuit": "Circuit de Muret (31)",
+      "address": "21, rue Jean-Manuel Fangio – 31600 MURET",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2026/01/NSK-Muret-819x1024.jpg",
+      "resultsUrl": null
+    },
+    {
+      "title": "Championnat de France",
+      "kind": "national",
+      "dateLabel": "10 - 11 - 12 JUILLET",
+      "start": "2026-07-10",
+      "end": "2026-07-12",
+      "circuit": "Mini60, Senior, Master, Gentleman IAME à Aigues-Vives (09)",
+      "address": "La Plano – 09600 Aigues-Vives",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2026/05/Aigues-Vives-V2-redim-724x1024.jpg",
+      "resultsUrl": null
+    },
+    {
+      "title": "S125 Senior",
+      "kind": "national",
+      "dateLabel": "10 - 11 - 12 JUILLET",
+      "start": "2026-07-10",
+      "end": "2026-07-12",
+      "circuit": "Course lors du Championnat de France à AIGUES VIVES (09)",
+      "address": "La Plano – 09600 Aigues-Vives",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2026/04/S125-SENIOR-AIGUES-VIVES-819x1024.jpg",
+      "resultsUrl": null
+    },
+    {
+      "title": "Challenge J.-C. Sanchez #1",
+      "kind": "sanchez",
+      "dateLabel": "DIMANCHE 19 JUILLET",
+      "start": "2026-07-19",
+      "end": "2026-07-19",
+      "circuit": "Circuit de Muret (31)",
+      "address": "21, rue Jean-Manuel Fangio – 31600 MURET",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/course-club-Challenge-jc-sanchez-muret-19-juillet-2026-819x1024.jpg",
+      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/sanchezm1/"
+    },
+    {
+      "title": "Challenge J.-C. Sanchez #2",
+      "kind": "sanchez",
+      "dateLabel": "DIMANCHE 06 SEPTEMBRE",
+      "start": "2026-09-06",
+      "end": "2026-09-06",
+      "circuit": "Circuit de Belmont/Rance (12)",
+      "address": "Le Bourg – 12370 BELMONT/RANCE",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/course-club-challenge-jc-sanchez-belmont-06-septembre-2026--819x1024.jpg",
+      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/sanchezm2/"
+    },
+    {
+      "title": "Challenge J.-C. Sanchez #3",
+      "kind": "sanchez",
+      "dateLabel": "DIMANCHE 13 SEPTEMBRE",
+      "start": "2026-09-13",
+      "end": "2026-09-13",
+      "circuit": "Labastide Murat (46)",
+      "address": "475, route de Gramat -Labastide Murat – 46240 COEUR DE CAUSSE",
+      "infoUrl": null,
+      "registrationUrl": null,
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/slalom-jc-sanchez-labastide-murat-13-septembre-2026--819x1024.jpg",
+      "resultsUrl": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2026/10/JCS-Labastide-2026.pdf"
+    },
+    {
+      "title": "Soirée remise des prix 2026",
+      "kind": "evenement",
+      "dateLabel": "SAMEDI 24 OCTOBRE",
+      "start": "2026-10-24",
+      "end": "2026-10-24",
+      "circuit": null,
+      "address": null,
+      "infoUrl": "https://karting-midipyrenees.fr/course-karting/repas-remise-des-prix-championnat-sud-2026/",
+      "registrationUrl": "https://karting-midipyrenees.fr/course-karting/repas-remise-des-prix-championnat-sud-2026/",
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2026/09/Remise-des-prix-24-10-26-lavelanet-819x1024.jpg",
+      "resultsUrl": null
+    },
+    {
+      "title": "Challenge J.-C. Sanchez #4",
+      "kind": "sanchez",
+      "dateLabel": "DIMANCHE 25 OCTOBRE",
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "circuit": "Circuit d’Aigues-Vives (09)",
+      "address": "La Plano – 09600 Aigues-Vives",
+      "infoUrl": "https://karting-midipyrenees.fr/course-karting/challenge-j-c-sanchez-2026-4-4-aigues-vives/",
+      "registrationUrl": "https://karting-midipyrenees.fr/course-karting/challenge-j-c-sanchez-2026-4-4-aigues-vives/",
+      "poster": "https://vitrine.karting-midipyrenees.fr/wp-content/uploads/2025/11/Championnat-du-sud-saison-2026-manche-1-circuit-aigues-vives-1-819x1024.jpg",
+      "resultsUrl": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/sanchezm4/"
+    }
+  ],
+  "standings": [
+    {
+      "name": "Championnat du Sud",
+      "url": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/champsud/"
+    },
+    {
+      "name": "Championnat de Ligue",
+      "url": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/champligue/"
+    },
+    {
+      "name": "Trophée J.-C. Sanchez",
+      "url": "https://www.apex-timing.com/goracing/results.php?path=/ligue-karting-op/2026/trsanchez/"
+    }
+  ],
+  "fetchedAt": "2026-11-08T09:00:00.000Z"
+}

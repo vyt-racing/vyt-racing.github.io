@@ -1,0 +1,38 @@
+</main>
+<footer class="pied" id="contact">
+<div class="vibreur" aria-hidden="true"></div>
+<div class="wrap">
+<div class="col">
+<p class="marque">VYT <span>RACING</span></p>
+<p>Promouvoir les sports mécaniques chez les jeunes.</p>
+<p>Association loi 1901 n° W313034292 · Toulouse</p>
+</div>
+<div class="col">
+<h2>Contact</h2>
+<a href="mailto:{{email}}">{{email}}</a>
+{{instagram_link}}
+</div>
+<div class="col">
+<h2>Infos</h2>
+<a href="/calendrier.html">Calendrier &amp; résultats</a>
+<a href="/carnet.html">Carnet de course</a>
+<a href="/mentions-legales.html">Mentions légales &amp; confidentialité</a>
+</div>
+</div>
+<p class="bas">Calendrier et résultats issus du site de la Ligue de Karting Occitanie Pyrénées et d'Apex Timing. © {{annee}} VYT Racing.</p>
+</footer>
+<script>
+(function () {
+  var b = document.querySelector('.menu-btn'), n = document.getElementById('nav');
+  if (!b || !n) return;
+  b.addEventListener('click', function () {
+    var o = n.classList.toggle('ouvert');
+    b.setAttribute('aria-expanded', o ? 'true' : 'false');
+  });
+  n.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') { n.classList.remove('ouvert'); b.setAttribute('aria-expanded', 'false'); }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+name: Mise à jour du site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Chaque nuit vers 4 h, heure de Paris
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      ligue_ok: ${{ steps.ligue.outcome == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm test
+
+      - name: Import du calendrier de la ligue
+        id: ligue
+        continue-on-error: true
+        run: npm run fetch:ligue
+
+      - name: Import des événements HelloAsso
+        env:
+          HELLOASSO_CLIENT_ID: ${{ secrets.HELLOASSO_CLIENT_ID }}
+          HELLOASSO_CLIENT_SECRET: ${{ secrets.HELLOASSO_CLIENT_SECRET }}
+        run: npm run fetch:helloasso
+
+      - name: Enregistrement des données mises à jour
+        run: |
+          if [ -n "$(git status --porcelain data/)" ]; then
+            git config user.name "vyt-racing-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/
+            git commit -m "Mise à jour automatique du calendrier [skip ci]"
+            git push
+          fi
+
+      - run: npm run build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  alerte:
+    # Le site est publié quand même ; ce job échoue pour déclencher l'e-mail d'alerte de GitHub
+    needs: build
+    if: needs.build.outputs.ligue_ok == 'false'
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "L'import du calendrier de la ligue a échoué : la mise en page de leur site a peut-être changé."
+          exit 1

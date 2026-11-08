@@ -1,0 +1,29 @@
+<!-- {"title": "Calendrier & résultats {{saison}} – VYT Racing", "description": "Calendrier et résultats de la Ligue de Karting Occitanie Pyrénées : Championnat du Sud, Challenge J.-C. Sanchez et épreuves nationales de la région, mis à jour chaque nuit."} -->
+{{> head}}
+
+<section class="bandeau">
+<div class="wrap">
+<div>
+<p class="surtitre">Ligue de Karting Occitanie Pyrénées</p>
+<h1 class="titre-xl">Calendrier &amp; résultats {{saison}}</h1>
+<p class="lead">Championnat du Sud, Challenge J.-C. Sanchez et épreuves nationales courues dans la région. Les inscriptions et les classements renvoient vers les sites officiels.</p>
+</div>
+<div class="cote">
+<p class="maj"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>Mis à jour automatiquement · {{maj}}</p>
+<a class="btn btn-rose" href="{{live_url}}">Chrono en direct</a>
+</div>
+</div>
+</section>
+<div class="vibreur" aria-hidden="true"></div>
+
+<div class="wrap">
+{{classements}}
+
+<section class="section" style="padding-top: 48px">
+<h2 class="titre-m" style="font-size: 34px">Toutes les épreuves</h2>
+{{calendrier_tableau}}
+<p class="source">Source : <a href="{{source_url}}">calendrier de la Ligue de Karting Occitanie Pyrénées</a> et <a href="{{results_page}}">page des résultats</a>. Les inscriptions se font sur le site de la ligue.</p>
+</section>
+</div>
+
+{{> foot}}
