@@ -44,3 +44,24 @@ npm test            # teste la lecture des pages de la ligue
 npm run build       # construit dist/
 npx http-server dist
 ```
+
+## Carnet de course (src/pages/carnet.html)
+
+Organisé par année, du plus récent au plus ancien. Pour ajouter un récit, insérer dans la bonne
+`<section class="annee">` (créer la section si l'année n'existe pas encore) :
+
+```html
+<li class="etape" data-type="course">   <!-- course | podium | victoire | roulage -->
+<div class="etape-date" aria-hidden="true"><span class="j">21</span><span class="m">sept.</span></div>
+<article id="r-2025-09-21" class="type-course">
+<p class="quand">21 septembre 2025 · Muret (31)</p>
+<h2>Titre</h2>
+<span class="badge">…</span>
+…
+</article>
+</li>
+```
+
+Puis mettre à jour : les chiffres clés en haut de page, la frise (un `<a class="point type-…" href="#r-…">`
+dans l'année) et le résumé de l'année (`.annee-tete p`). Les récits longs se replient tout seuls.
+Photos : retirer les métadonnées EXIF/GPS avant publication.

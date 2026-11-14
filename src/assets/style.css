@@ -263,3 +263,87 @@ a:hover { color: var(--bleu-fonce); }
 .parcours .p-nom.us { fill: #fff; }
 .parcours .b1 { fill: #5A5D9E; } .parcours .b2 { fill: #8B8EC9; }
 .parcours .b1.us { fill: var(--bleu); stroke: #fff; stroke-width: 1; } .parcours .b2.us { fill: var(--rose); }
+
+/* ---------- Carnet : années, frise et timeline ---------- */
+:root { --haut-entete: 74px; --c-victoire: #F5B800; --c-podium: var(--rose); --c-course: var(--bleu); --c-roulage: #19A88A; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.carnet.recit { max-width: 960px; padding-top: 8px; }
+.carnet-chiffres { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 28px; }
+.carnet-chiffres div { background: #fff; border-radius: 14px; padding: 16px 14px; text-align: center; }
+.carnet-chiffres b { display: block; font-family: var(--titre); font-size: 40px; font-style: italic; font-weight: 800; line-height: 1; color: var(--bleu); }
+.carnet-chiffres div:nth-child(3) b, .carnet-chiffres div:nth-child(4) b { color: var(--rose); }
+.carnet-chiffres span { font-size: 13px; font-weight: 600; color: var(--texte-doux); text-transform: uppercase; letter-spacing: .05em; }
+
+.carnet-frise { display: flex; margin-top: 18px; background: var(--encre); border-radius: 16px; padding: 22px 18px 18px; overflow-x: auto; position: relative; }
+.frise-an::before { content: ""; position: absolute; left: 0; right: 0; bottom: 10px; height: 3px; background: linear-gradient(90deg, var(--bleu), var(--rose)); }
+.frise-an:first-child::before { left: 50%; } .frise-an:last-child::before { right: 50%; }
+.frise-an { flex: 1 1 0; min-width: 110px; display: flex; flex-direction: column; align-items: center; gap: 14px; position: relative; }
+.frise-annee { font-family: var(--titre); font-size: 26px; font-style: italic; font-weight: 800; color: #fff; text-decoration: none; }
+.frise-annee:hover { color: #FFB3E2; }
+.frise-points { display: flex; gap: 7px; flex-wrap: wrap; justify-content: center; position: relative; z-index: 1; }
+.point { display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: var(--c-course); border: 3px solid var(--encre); box-shadow: 0 0 0 2px rgba(255,255,255,.75); transition: transform .15s; }
+.point:hover, .point:focus-visible { transform: scale(1.35); }
+.point.type-victoire { background: var(--c-victoire); } .point.type-podium { background: var(--c-podium); } .point.type-roulage { background: var(--c-roulage); }
+.frise-legende { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; margin: 10px 2px 0; font-size: 13px; color: var(--texte-doux); }
+.frise-legende .point { width: 12px; height: 12px; border-width: 2px; border-color: #fff; box-shadow: 0 0 0 1px var(--trait); margin-right: 6px; vertical-align: -1px; }
+
+.carnet-barre { position: sticky; top: var(--haut-entete); z-index: 4; display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: space-between; align-items: center; margin: 26px -12px 0; padding: 10px 12px; background: rgba(245,245,250,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--trait); }
+.carnet-annees, .carnet-filtres { display: flex; gap: 6px; flex-wrap: wrap; }
+.carnet-annees a { font-family: var(--titre); font-weight: 800; font-style: italic; font-size: 18px; padding: 4px 12px; border-radius: 999px; color: var(--bleu); text-decoration: none; }
+.carnet-annees a:hover, .carnet-annees a.actif { background: var(--bleu); color: #fff; }
+.carnet-filtres button { font: inherit; font-size: 14px; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--trait); background: #fff; color: var(--encre); cursor: pointer; }
+.carnet-filtres button[aria-pressed="true"] { background: var(--rose); border-color: var(--rose); color: #fff; }
+
+.annee { scroll-margin-top: calc(var(--haut-entete) + 70px); margin-top: 34px; }
+.annee-tete { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; border-bottom: 3px solid var(--encre); padding-bottom: 6px; }
+.carnet .annee-num { margin: 0; font-family: var(--titre); font-size: clamp(64px, 11vw, 112px); font-style: italic; font-weight: 800; line-height: .9; color: transparent; -webkit-text-stroke: 2px var(--bleu); }
+.annee-tete p { margin: 0; font-weight: 600; color: var(--texte-doux); }
+
+.timeline { list-style: none; margin: 0; padding: 0 0 0 92px; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 66px; top: 22px; bottom: 0; width: 3px; background: repeating-linear-gradient(180deg, var(--encre) 0 10px, #fff 10px 20px); opacity: .25; }
+.etape { position: relative; }
+.etape::before { content: ""; position: absolute; left: -33px; top: 46px; width: 18px; height: 18px; border-radius: 50%; background: var(--c-course); border: 4px solid var(--fond); box-shadow: 0 0 0 2px var(--c-course); }
+.etape[data-type="victoire"]::before { background: var(--c-victoire); box-shadow: 0 0 0 2px var(--c-victoire); }
+.etape[data-type="podium"]::before { background: var(--c-podium); box-shadow: 0 0 0 2px var(--c-podium); }
+.etape[data-type="roulage"]::before { background: var(--c-roulage); box-shadow: 0 0 0 2px var(--c-roulage); }
+.etape-date { position: absolute; left: -92px; top: 26px; width: 50px; text-align: center; font-family: var(--titre); font-style: italic; line-height: 1; }
+.etape-date .j { display: block; font-size: 32px; font-weight: 800; color: var(--encre); }
+.etape-date .m { display: block; font-size: 15px; font-weight: 700; color: var(--rose-texte); text-transform: uppercase; }
+.recit .timeline article { margin-top: 20px; scroll-margin-top: calc(var(--haut-entete) + 70px); position: relative; }
+.timeline article.type-roulage { border-left: 6px solid var(--c-roulage); }
+.timeline article.type-victoire { border-top: 6px solid var(--c-victoire); }
+.timeline article.type-victoire .badge { background: var(--c-victoire); }
+.timeline article.type-roulage .badge { background: var(--c-roulage); color: #fff; }
+
+.timeline article.replie { max-height: 620px; overflow: hidden; }
+.timeline article.replie::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 180px; background: linear-gradient(rgba(255,255,255,0), #fff 75%); pointer-events: none; }
+.lire-suite { display: block; margin: 14px auto 0; font: inherit; font-weight: 700; font-size: 15px; padding: 10px 20px; border-radius: 999px; border: 0; background: var(--bleu); color: #fff; cursor: pointer; position: relative; z-index: 1; }
+.timeline article.replie .lire-suite { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); margin: 0; }
+.lire-suite:hover { background: var(--bleu-fonce); }
+
+@media (max-width: 700px) {
+  .carnet-chiffres { grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .carnet-chiffres div { padding: 10px 4px; border-radius: 10px; }
+  .carnet-chiffres b { font-size: 24px; }
+  .carnet-chiffres div:last-child b { font-size: 17px; line-height: 1.4; }
+  .carnet-chiffres span { font-size: 10px; letter-spacing: 0; }
+  .carnet-frise { padding: 18px 6px 14px; }
+  .frise-an { flex: 0 0 auto; min-width: 0; padding: 0 14px; }
+  .frise-points { flex-wrap: nowrap; }
+  .frise-annee { font-size: 22px; }
+  .timeline { padding-left: 26px; }
+  .timeline::before { left: 8px; }
+  .etape::before { left: -26px; top: 30px; }
+  .etape-date { position: static; display: flex; gap: 6px; align-items: baseline; width: auto; margin: 26px 0 -12px; text-align: left; }
+  .etape-date .j { font-size: 24px; }
+  .recit article { padding: 22px; }
+  .recit-photos.trio { grid-template-columns: 1fr 1fr; }
+  .recit-photos.trio .recit-photo:nth-child(3) { grid-column: span 2; }
+  .recit-photos.trio .recit-photo:nth-child(3) img { aspect-ratio: 16 / 10; object-fit: cover; }
+  .carnet-barre { margin: 20px -16px 0; padding: 8px 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .point { transition: none; } }
+.frise-legende > span:not(.point) { display: inline-flex; align-items: center; }
+.timeline article.replie { max-height: 560px; }
+.timeline article.replie .recit-photo img { max-height: 240px; width: 100%; object-fit: cover; }
+.timeline article.replie .recit-chronos, .timeline article.replie .parcours { display: none; }
