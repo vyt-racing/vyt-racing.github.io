@@ -349,3 +349,4 @@ a:hover { color: var(--bleu-fonce); }
 .timeline article.replie .recit-chronos, .timeline article.replie .parcours { display: none; }
 .recit-photos.trio img { aspect-ratio: 3 / 4; object-fit: cover; }
 .recit-photos img { aspect-ratio: 3 / 4; object-fit: cover; }
+.recit-photos.paysage img { aspect-ratio: 16 / 10; }
