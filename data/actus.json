@@ -1,0 +1,40 @@
+{
+  "articles": [
+    {
+      "titre": "Pole position et podium à Alès pour Benoit Motorsport",
+      "lien": "https://www.karting-sud.com/2026/11/12/pole-position-et-podium-a-ales-pour-benoit-motorsport/",
+      "date": "2026-11-12",
+      "source": "Karting-Sud"
+    },
+    {
+      "titre": "Décès de Pierre Bousquet : l’ASK Montpellier perd un membre important de sa famille",
+      "lien": "https://www.karting-sud.com/2026/11/12/deces-de-pierre-bousquet-lask-montpellier-perd-un-membre-important-de-sa-famille/",
+      "date": "2026-11-12",
+      "source": "Karting-Sud"
+    },
+    {
+      "titre": "Marcel Limousin – Candidat à la victoire au Kart Mag Festival à Valence",
+      "lien": "https://www.karting-sud.com/2026/11/08/marcel-limousin-candidat-a-la-victoire-au-kart-mag-festival-a-valence/",
+      "date": "2026-11-08",
+      "source": "Karting-Sud"
+    },
+    {
+      "titre": "Challenge Jean-Claude Sanchez 4/4 à Aigues-Vives – Des titres et des podiums pour OKS pour conclure le Challenge",
+      "lien": "https://www.karting-sud.com/2026/11/04/challenge-jean-claude-sanchez-4-4-a-aigues-vives-des-titres-et-des-podiums-pour-oks-pour-conclure-le-challenge/",
+      "date": "2026-11-03",
+      "source": "Karting-Sud"
+    },
+    {
+      "titre": "Classement Challenge Jean-Claude Sanchez",
+      "lien": "https://karting-midipyrenees.fr/ligue-karting-occitanie/classement-challenge-jean-claude-sanchez/",
+      "date": "2025-11-02",
+      "source": "Ligue Occitanie Pyrénées"
+    },
+    {
+      "titre": "Classement Championnat de Ligue O.P. 2025",
+      "lien": "https://karting-midipyrenees.fr/ligue-karting-occitanie/classement-championnat-de-ligue-2025/",
+      "date": "2025-04-07",
+      "source": "Ligue Occitanie Pyrénées"
+    }
+  ]
+}
