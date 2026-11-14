@@ -416,3 +416,25 @@ a:hover { color: var(--bleu-fonce); }
 .actu-meta { font-size: 13px; font-weight: 600; color: var(--rose-texte); text-transform: uppercase; letter-spacing: .04em; }
 .actu b { font-family: var(--titre); font-size: 22px; line-height: 1.2; }
 .actu-lire { margin-top: auto; font-size: 14px; font-weight: 600; color: var(--bleu); }
+
+/* Fiche officielle de l'association (accueil) */
+.fiche-asso { display: grid; grid-template-columns: minmax(260px, 1fr) 2fr; margin-top: 28px; background: var(--carte); border-radius: 24px; overflow: hidden; border: 1px solid var(--trait); box-shadow: 0 1px 2px rgba(20,21,43,.06); }
+.fiche-sceau { background: linear-gradient(160deg, var(--bleu) 0%, var(--bleu-fonce) 100%); color: #fff; padding: 34px 30px; display: flex; flex-direction: column; gap: 12px; position: relative; }
+.fiche-sceau::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: repeating-linear-gradient(90deg, #fff 0 14px, var(--rose) 14px 28px); opacity: .9; }
+.fiche-sceau svg { width: 44px; height: 44px; color: #FFB3E2; }
+.fiche-sceau .surtitre { color: #FFB3E2; }
+.fiche-sceau .titre-m { color: #fff; font-size: 26px; }
+.fiche-sceau p { margin: 0; color: #E4E5FA; font-size: 15px; }
+.fiche-infos { margin: 0; padding: 26px 30px 8px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 32px; }
+.fiche-infos > div { padding: 14px 0; border-bottom: 1px solid var(--trait); }
+.fiche-infos dt { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--texte-doux); }
+.fiche-infos dd { margin: 4px 0 0; color: var(--encre); font-weight: 600; font-size: 15.5px; }
+.fiche-infos dd.code { font-family: var(--titre); font-size: 24px; font-weight: 700; letter-spacing: .06em; color: var(--bleu); }
+.fiche-infos a { color: var(--bleu); }
+.fiche-bas { grid-column: 2; margin: 0; padding: 14px 30px 22px; font-size: 14px; color: var(--texte-doux); }
+.fiche-bas a { color: var(--bleu); font-weight: 600; }
+@media (max-width: 860px) {
+  .fiche-asso { grid-template-columns: 1fr; }
+  .fiche-infos { grid-template-columns: 1fr; padding: 18px 24px 4px; }
+  .fiche-bas { grid-column: 1; padding: 12px 24px 20px; }
+}
