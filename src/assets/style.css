@@ -235,3 +235,18 @@ a:hover { color: var(--bleu-fonce); }
 /* Formulaire HelloAsso */
 .widget-ha { background: #fff; border-radius: var(--rayon); padding: clamp(8px, 2vw, 24px); margin-top: 40px; }
 .widget-ha iframe { display: block; width: 100%; height: 750px; border: 0; }
+
+/* Carnet : cartes chrono et graphique de parcours */
+.recit-chronos { display: grid; gap: 12px; margin: 6px 0 18px; }
+.recit-chronos img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.parcours { margin: 6px 0 18px; padding: 14px 10px 6px; background: var(--encre); border-radius: 12px; }
+.parcours svg { display: block; width: 100%; height: auto; font-family: var(--titre); }
+.parcours .p-titre { fill: #fff; font-size: 22px; font-weight: 800; font-style: italic; text-transform: uppercase; }
+.parcours .p-leg { fill: #B4B6D2; font-size: 14px; }
+.parcours .p-axe { fill: #B4B6D2; font-size: 15px; font-weight: 700; }
+.parcours .p-grille { stroke: rgba(255,255,255,.12); stroke-width: 1; }
+.parcours .p-podium { fill: rgba(251, 2, 158, .10); }
+.parcours .p-ligne { fill: none; stroke: var(--rose); stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+.parcours .p-pt { fill: var(--bleu); stroke: #fff; stroke-width: 3; }
+.parcours .p-pt.top { fill: var(--rose); }
+.parcours .p-num { fill: #fff; font-size: 17px; font-weight: 800; }
