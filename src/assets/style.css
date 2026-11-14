@@ -350,3 +350,5 @@ a:hover { color: var(--bleu-fonce); }
 .recit-photos.trio img { aspect-ratio: 3 / 4; object-fit: cover; }
 .recit-photos img { aspect-ratio: 3 / 4; object-fit: cover; }
 .recit-photos.paysage img { aspect-ratio: 16 / 10; }
+.recit-photos.mixte { grid-template-columns: 1fr 2fr; align-items: center; }
+.recit-photos.mixte img { aspect-ratio: auto; }
