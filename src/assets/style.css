@@ -416,25 +416,3 @@ a:hover { color: var(--bleu-fonce); }
 .actu-meta { font-size: 13px; font-weight: 600; color: var(--rose-texte); text-transform: uppercase; letter-spacing: .04em; }
 .actu b { font-family: var(--titre); font-size: 22px; line-height: 1.2; }
 .actu-lire { margin-top: auto; font-size: 14px; font-weight: 600; color: var(--bleu); }
-
-/* ---- Roulages (data/roulages.json) ---- */
-.roulages { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 22px; margin-top: 44px; }
-.roulage { display: grid; grid-template-columns: minmax(150px, 38%) 1fr; background: var(--carte); border-radius: var(--rayon); overflow: hidden; box-shadow: 0 1px 2px rgba(20,21,43,.06); border-top: 4px solid var(--rose); }
-.roulage:nth-child(even) { border-top-color: var(--bleu); }
-.roulage-photo { position: relative; min-height: 240px; background: var(--bleu); }
-.roulage-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.roulage-date { position: absolute; top: 14px; left: 14px; margin: 0; display: flex; flex-direction: column; align-items: center; min-width: 62px; padding: 8px 10px 6px; border-radius: 12px; background: var(--bleu); color: #fff; font-family: var(--titre); line-height: 1; box-shadow: 0 4px 14px rgba(11,11,23,.3); }
-.roulage:nth-child(odd) .roulage-date { background: var(--rose); color: var(--encre); }
-.roulage-date .j { font-size: 32px; font-weight: 800; font-style: italic; }
-.roulage-date .m { font-size: 15px; font-weight: 700; text-transform: uppercase; }
-.roulage-date .wd { font-size: 12px; font-weight: 700; opacity: .85; margin-top: 3px; }
-.roulage-corps { padding: 24px 26px; display: flex; flex-direction: column; gap: 10px; }
-.roulage-corps p { margin: 0; color: var(--texte); font-size: 15px; }
-.roulage-corps .roulage-quand { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--rose-texte); }
-.roulage-corps h3 { margin: 0; font-family: var(--titre); font-weight: 800; font-style: italic; font-size: 27px; line-height: 1.05; text-transform: uppercase; color: var(--bleu); }
-.roulage-corps .roulage-meta { color: var(--texte-doux); font-size: 14px; font-weight: 600; }
-.roulage-corps .btn { align-self: flex-start; margin-top: 6px; }
-@media (max-width: 560px) {
-  .roulage { grid-template-columns: 1fr; }
-  .roulage-photo { min-height: 260px; }
-}
