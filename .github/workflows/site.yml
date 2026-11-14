@@ -45,13 +45,17 @@ jobs:
           HELLOASSO_CLIENT_SECRET: ${{ secrets.HELLOASSO_CLIENT_SECRET }}
         run: npm run fetch:helloasso
 
+      - name: Import des actualités du karting en Occitanie
+        continue-on-error: true
+        run: npm run fetch:actus
+
       - name: Enregistrement des données mises à jour
         run: |
           if [ -n "$(git status --porcelain data/)" ]; then
             git config user.name "vyt-racing-bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/
-            git commit -m "Mise à jour automatique du calendrier [skip ci]"
+            git commit -m "Mise à jour automatique du calendrier et des actualités [skip ci]"
             git push
           fi
 

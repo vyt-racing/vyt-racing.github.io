@@ -6,6 +6,7 @@
   "scripts": {
     "fetch:ligue": "node scripts/fetch-ligue.mjs",
     "fetch:helloasso": "node scripts/fetch-helloasso.mjs",
+    "fetch:actus": "node scripts/fetch-actus.mjs",
     "build": "node scripts/build.mjs",
     "test": "node --test scripts/*.test.mjs"
   },

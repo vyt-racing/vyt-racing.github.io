@@ -13,6 +13,7 @@ const config = readJson('site.config.json', {});
 const ligue = readJson('data/ligue.json', { races: [], standings: [] });
 const decouverte = readJson('data/decouverte.json', { dates: [] });
 const helloasso = readJson('data/helloasso.json', { evenements: [] });
+const actus = readJson('data/actus.json', { articles: [] });
 
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -96,6 +97,27 @@ ${next.details ? `<p class="meta">${esc(next.details)}</p>` : ''}
 </div>`;
 }
 
+
+function actusBloc() {
+  const arts = (actus.articles || []).slice(0, 6);
+  if (!arts.length) return '';
+  const items = arts.map((a) => `<a class="actu" href="${esc(a.lien)}" target="_blank" rel="noopener"><span class="actu-meta">${esc(fmtDate(a.date, true))} · ${esc(a.source)}</span><b>${esc(a.titre)}</b><span class="actu-lire">Lire l'article ↗</span></a>`).join('\n');
+  return `<section class="section" id="actus">
+<div class="wrap">
+<div class="section-tete">
+<div>
+<p class="surtitre">L'actu du karting en Occitanie</p>
+<h2 class="titre-l">Ce qui se passe sur les pistes de la région</h2>
+</div>
+<p>Les dernières nouvelles de la Ligue de Karting Occitanie Pyrénées et de la presse spécialisée, mises à jour chaque nuit. Les articles s'ouvrent sur le site de leur auteur.</p>
+</div>
+<div class="actus">
+${items}
+</div>
+</div>
+</section>`;
+}
+
 function decouverteDates() {
   const dates = datesDecouverte();
   if (!dates.length) {
@@ -172,6 +194,7 @@ const vars = {
   prochaine_course: prochaineCourse(),
   decouverte_carte: decouverteCarte(),
   decouverte_dates: decouverteDates(),
+  actus: actusBloc(),
   calendrier_tableau: calendrierTableau(),
   classements: classements(),
 };
