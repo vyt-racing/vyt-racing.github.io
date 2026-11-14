@@ -1,0 +1,49 @@
+{
+  "_aide": "Roulages affichés sur l'accueil et la page Découverte (seules les dates à venir s'affichent). Photo : nom d'un fichier de src/assets/img/, sans données GPS. Inscription : laisser vide pour un lien e-mail automatique.",
+  "roulages": [
+    {
+      "date": "2026-11-21",
+      "lieu": "Circuit de Muret (31)",
+      "titre": "Roulage d'automne : toutes et tous en piste",
+      "horaires": "9 h – 12 h 30",
+      "public": "Dès 7 ans · tous niveaux",
+      "texte": "Une matinée de roulage ouverte à tous les jeunes, adhérents ou non : débutantes et débutants, pilotes licenciés ou simples curieux. Les séances sont organisées par niveau pour que chacun roule à son rythme, en toute sécurité. Casque, combinaison et gants peuvent être prêtés : il suffit de le signaler à l'inscription.",
+      "photo": "roulage-2026-11-21.jpg",
+      "alt": "Karts alignés en pré-grille sur le circuit de Muret, pilotes casqués vus de dos",
+      "inscription": ""
+    },
+    {
+      "date": "2026-11-29",
+      "lieu": "Circuit de Muret (31)",
+      "titre": "Apprendre à rouler sur le mouillé",
+      "horaires": "13 h 30 – 17 h",
+      "public": "Dès 10 ans · licence à la journée possible",
+      "texte": "Fin novembre, la piste est souvent humide : l'occasion idéale d'apprendre à piloter sous la pluie. Nos pilotes partagent leurs repères : freiner plus tôt, doser l'accélérateur, chercher l'adhérence. Pneus pluie fournis sur les karts de l'association. Que tu aies déjà roulé sur le mouillé ou jamais, tu as ta place.",
+      "photo": "roulage-2026-11-29.jpg",
+      "alt": "Kart rose et bleu de l'association sur une piste mouillée, pilote casqué vu de dos",
+      "inscription": ""
+    },
+    {
+      "date": "2026-12-05",
+      "lieu": "Circuit de Muret (31)",
+      "titre": "Premiers tours, entre débutants",
+      "horaires": "9 h – 12 h",
+      "public": "Dès 7 ans · sans licence ni expérience",
+      "texte": "Une matinée pensée pour celles et ceux qui n'ont jamais, ou presque, tenu un volant. Petits groupes, séances courtes, encadrement par nos pilotes : on prend confiance tour après tour, sans chrono imposé ni comparaison. Un besoin particulier ? Dis-le-nous à l'inscription, on cherche ensemble une solution.",
+      "photo": "roulage-2026-12-05.jpg",
+      "alt": "Jeune pilote casqué, visière baissée, installé dans un kart aux couleurs de l'association",
+      "inscription": ""
+    },
+    {
+      "date": "2026-12-13",
+      "lieu": "Circuit de Muret (31)",
+      "titre": "Roulage de fin d'année et atelier mécanique",
+      "horaires": "10 h – 16 h",
+      "public": "Tous niveaux · familles bienvenues",
+      "texte": "Dernier rendez-vous de 2026 : séances en piste le matin, puis atelier ouvert l'après-midi pour comprendre le réglage d'un kart (pression des pneus, chaîne, carburation). Pilotes, parents, frères, sœurs et bénévoles : chacun peut mettre les mains dans le moteur. Un goûter partagé clôture la saison.",
+      "photo": "roulage-2026-12-13.jpg",
+      "alt": "Gros plan sur le carénage avant rose et bleu d'un kart de l'association",
+      "inscription": ""
+    }
+  ]
+}

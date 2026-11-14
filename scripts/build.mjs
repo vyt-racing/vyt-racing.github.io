@@ -14,6 +14,7 @@ const ligue = readJson('data/ligue.json', { races: [], standings: [] });
 const decouverte = readJson('data/decouverte.json', { dates: [] });
 const helloasso = readJson('data/helloasso.json', { evenements: [] });
 const actus = readJson('data/actus.json', { articles: [] });
+const roulagesData = readJson('data/roulages.json', { roulages: [] });
 
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -130,6 +131,45 @@ function decouverteDates() {
   return `<ul class="dates">\n${items}\n</ul>`;
 }
 
+// Roulages saisis dans data/roulages.json (seules les dates à venir s'affichent)
+function roulagesBloc() {
+  const list = (roulagesData.roulages || [])
+    .filter((r) => r.date && r.date >= today)
+    .sort((a, b) => a.date.localeCompare(b.date));
+  if (!list.length) return '';
+  const cards = list.map((r) => {
+    const p = parts(r.date);
+    const lien = r.inscription || mailto(`Roulage ${shortPlace(r.lieu) || ''} ${fmtDate(r.date, true)}`.replace(/\s+/g, ' '));
+    return `<article class="roulage">
+<div class="roulage-photo">
+${r.photo ? `<img src="/assets/img/${esc(r.photo)}" alt="${esc(r.alt || '')}" loading="lazy">` : ''}
+<p class="roulage-date"><span class="j">${esc(p.day)}</span><span class="m">${esc(MOIS[p.m - 1])}</span><span class="wd">${esc(JOURS[p.wd])}</span></p>
+</div>
+<div class="roulage-corps">
+<p class="roulage-quand">${esc(fmtDate(r.date, true, true))}${r.horaires ? ' · ' + esc(r.horaires) : ''}</p>
+<h3>${esc(r.titre)}</h3>
+<p class="roulage-meta">${[r.lieu, r.public].filter(Boolean).map(esc).join(' · ')}</p>
+<p>${esc(r.texte)}</p>
+<a class="btn btn-rose" href="${esc(lien)}">S'inscrire</a>
+</div>
+</article>`;
+  }).join('\n');
+  return `<section class="section" id="roulages">
+<div class="wrap">
+<div class="section-tete">
+<div>
+<p class="surtitre">Roulages à Muret</p>
+<h2 class="titre-l">Les prochains week-ends en piste</h2>
+</div>
+<p>Des séances de roulage encadrées sur le circuit de Muret, ouvertes à tous les jeunes : filles et garçons, débutants ou licenciés, adhérents ou non. Matériel prêté et tarif adapté sur simple demande.</p>
+</div>
+<div class="roulages">
+${cards}
+</div>
+</div>
+</section>`;
+}
+
 function calendrierTableau() {
   if (!races.length) return '<p class="source">Le calendrier de la ligue n\'est pas disponible pour le moment.</p>';
   const rows = races.map((r) => {
@@ -195,6 +235,7 @@ const vars = {
   decouverte_carte: decouverteCarte(),
   decouverte_dates: decouverteDates(),
   actus: actusBloc(),
+  roulages: roulagesBloc(),
   calendrier_tableau: calendrierTableau(),
   classements: classements(),
 };

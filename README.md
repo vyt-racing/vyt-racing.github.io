@@ -20,6 +20,7 @@ En ligne : https://vyt-racing.github.io
 | changer un texte de l'accueil | `src/pages/index.html` |
 | ajouter un compte rendu de course | `src/pages/carnet.html` |
 | ajouter une journée découverte (sans HelloAsso) | `data/decouverte.json` |
+| ajouter un roulage (photo, texte, horaires) | `data/roulages.json` |
 | renseigner les liens HelloAsso, Instagram, le domaine | `site.config.json` |
 | changer les couleurs ou la mise en page | `src/assets/style.css` |
 
