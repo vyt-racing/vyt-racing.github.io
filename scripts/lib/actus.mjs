@@ -31,10 +31,16 @@ export function estRegional(item) {
   return MOTS_OCCITANIE.some((m) => texte.includes(m));
 }
 
-// Fusionne, dédoublonne par lien, trie du plus récent au plus ancien
-export function fusionner(listes, max = 6) {
+// Sujets qu'on ne met pas en avant sur l'accueil d'une association jeunesse
+const EXCLUS = ['décès', 'deces', 'hommage', 'obsèques', 'nécrologie', 'disparition'];
+export const aAfficher = (a) => !EXCLUS.some((m) => a.titre.toLowerCase().includes(m));
+
+// Fusionne, dédoublonne par lien, écarte le trop ancien, trie du plus récent au plus ancien
+export function fusionner(listes, max = 6, depuis = null) {
   const vus = new Set();
   return listes.flat()
+    .filter(aAfficher)
+    .filter((a) => !depuis || a.date >= depuis)
     .filter((a) => (vus.has(a.lien) ? false : (vus.add(a.lien), true)))
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, max)

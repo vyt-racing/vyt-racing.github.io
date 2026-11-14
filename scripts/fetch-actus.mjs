@@ -38,7 +38,9 @@ async function main() {
   }
   console.log(bilan.join('\n'));
 
-  const articles = fusionner(listes, 6);
+  // Seulement les 6 derniers mois
+  const depuis = new Date(Date.now() - 183 * 864e5).toISOString().slice(0, 10);
+  const articles = fusionner(listes, 6, depuis);
   if (articles.length === 0) {
     const ancien = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : null;
     console.warn(`Aucune actualité récupérée : ${ancien ? 'les dernières connues sont conservées' : 'le bloc reste masqué'}.`);

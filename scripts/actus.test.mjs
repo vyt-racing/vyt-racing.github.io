@@ -31,3 +31,11 @@ test('fusionne, dédoublonne et trie', () => {
   assert.deepEqual(out.map((o) => o.titre), ['B', 'A']);
   assert.deepEqual(Object.keys(out[0]), ['titre', 'lien', 'date', 'source']);
 });
+
+test('écarte les avis de décès et le trop ancien', () => {
+  const base = { lien: 'l', source: 's', categories: [], resume: '' };
+  const out = fusionner([[{ ...base, titre: 'Décès de X', lien: '1', date: '2026-11-01' },
+    { ...base, titre: 'Course', lien: '2', date: '2026-11-01' },
+    { ...base, titre: 'Vieux', lien: '3', date: '2024-01-01' }]], 6, '2026-05-01');
+  assert.deepEqual(out.map((o) => o.titre), ['Course']);
+});
