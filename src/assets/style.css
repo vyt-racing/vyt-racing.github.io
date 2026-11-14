@@ -250,3 +250,16 @@ a:hover { color: var(--bleu-fonce); }
 .parcours .p-pt { fill: var(--bleu); stroke: #fff; stroke-width: 3; }
 .parcours .p-pt.top { fill: var(--rose); }
 .parcours .p-num { fill: #fff; font-size: 17px; font-weight: 800; }
+
+/* Article à la une */
+.recit h3 { margin: 22px 0 8px; font-family: var(--titre); font-size: 22px; font-style: italic; text-transform: uppercase; color: var(--bleu); }
+.recit .chapeau { font-size: 18px; font-weight: 600; color: var(--encre); }
+.recit-photo figcaption { margin: 6px 0 16px; font-size: 13px; color: var(--texte-doux); }
+.recit-photos.trio { grid-template-columns: repeat(3, 1fr); }
+.a-la-une { border-top: 6px solid var(--rose); }
+.dedicace { margin: 22px 0; padding: 22px 26px; background: var(--encre); color: #fff; border-radius: 12px; border-left: 6px solid var(--rose); font-family: var(--titre); font-size: 28px; font-style: italic; font-weight: 800; line-height: 1.2; }
+.dedicace span { display: block; margin-top: 8px; font-family: var(--corps); font-size: 14px; font-style: normal; font-weight: 600; color: #B4B6D2; }
+.parcours .p-nom { fill: #D6D6E6; font-size: 16px; font-weight: 700; }
+.parcours .p-nom.us { fill: #fff; }
+.parcours .b1 { fill: #5A5D9E; } .parcours .b2 { fill: #8B8EC9; }
+.parcours .b1.us { fill: var(--bleu); stroke: #fff; stroke-width: 1; } .parcours .b2.us { fill: var(--rose); }
