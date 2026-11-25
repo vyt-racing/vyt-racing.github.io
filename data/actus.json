@@ -1,6 +1,12 @@
 {
   "articles": [
     {
+      "titre": "7ème manche de l’Atlantic Trophée 2026 au circuit LF Karting – Les photos",
+      "lien": "https://www.karting-sud.com/2026/11/24/7eme-manche-de-latlantic-trophee-2026-au-circuit-lf-karting-les-photos/",
+      "date": "2026-11-24",
+      "source": "Karting-Sud"
+    },
+    {
       "titre": "7ème manche de l’Atlantic Trophée 2026 à Layrac – Les résultats",
       "lien": "https://www.karting-sud.com/2026/11/22/7eme-manche-de-latlantic-trophee-2026-a-layrac-les-resultats/",
       "date": "2026-11-22",
@@ -28,12 +34,6 @@
       "titre": "Pole position et podium à Alès pour Benoit Motorsport",
       "lien": "https://www.karting-sud.com/2026/11/12/pole-position-et-podium-a-ales-pour-benoit-motorsport/",
       "date": "2026-11-12",
-      "source": "Karting-Sud"
-    },
-    {
-      "titre": "Marcel Limousin – Candidat à la victoire au Kart Mag Festival à Valence",
-      "lien": "https://www.karting-sud.com/2026/11/08/marcel-limousin-candidat-a-la-victoire-au-kart-mag-festival-a-valence/",
-      "date": "2026-11-08",
       "source": "Karting-Sud"
     }
   ]
